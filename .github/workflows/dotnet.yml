@@ -24,3 +24,6 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
       working-directory: test/cake-lambda-blog.Tests
+    - name: Publish
+      run: dotnet publish
+      working-directory: src/cake-lambda-blog
