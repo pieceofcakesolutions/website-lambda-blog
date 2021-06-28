@@ -25,5 +25,13 @@ jobs:
       run: dotnet test --no-build --verbosity normal
       working-directory: test/cake-lambda-blog.Tests
     - name: Publish
-      run: dotnet publish
+      run: dotnet publish -c Release
       working-directory: src/cake-lambda-blog
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.LAMBDA_AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.LAMBDA_AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+    - name: Deploy static site to S3 bucket
+      run: ls src/cake-lambda-blog/bin/Release/netcoreapp3.1/publish/
