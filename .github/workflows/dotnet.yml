@@ -20,6 +20,7 @@ jobs:
       working-directory: src/cake-lambda-blog
     - name: Build
       run: dotnet build --no-restore
+      working-directory: src/cake-lambda-blog
     - name: Test
       run: dotnet test --no-build --verbosity normal
-      working-directory: src/cake-lambda-blog.Tests
+      working-directory: test/cake-lambda-blog.Tests
