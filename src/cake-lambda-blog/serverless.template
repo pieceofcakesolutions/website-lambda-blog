@@ -9,12 +9,13 @@
         "true",
         "false"
       ],
-      "Description": "If true then the DynamoDB blogging table will be created with the CloudFormation stack."
+      "Description": "If true then the DynamoDB blogging table will be created with the CloudFormation stack.",
+      "Default": true
     },
     "BlogTableName": {
       "Type": "String",
       "Description": "Name of DynamoDB table used to store the blog post. If left blank a new table will be created.",
-      "MinLength": "0"
+      "MinLength": "0",
     },
     "ReadCapacity": {
       "Type": "Number",
@@ -43,7 +44,7 @@
         {
           "Ref": "BlogTableName"
         },
-        ""
+        "CakeFnBlog"
       ]
     }
   },
