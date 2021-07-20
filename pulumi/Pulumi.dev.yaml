@@ -1,0 +1,5 @@
+config:
+  aws:region: us-east-1
+  cake-aws-lambda-blog:instance: "01"
+  cake-aws-lambda-blog:targetDomain: dev.getcake.io
+  cake-aws-lambda-blog:targetApiDomain: api.dev.getcake.io

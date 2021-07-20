@@ -11,5 +11,8 @@
   "framework": "netcoreapp3.1",
   "s3-prefix": "BlueprintBaseName/",
   "template": "serverless.template",
-  "template-parameters": "ShouldCreateTable=true;BlogTableName="
+  "template-parameters": "ShouldCreateTable=true;BlogTableName=CakeBlog",
+  "function-runtime":"dotnetcore3.1",
+  "function-memory-size" : 512,
+  "function-timeout" : 30
 }

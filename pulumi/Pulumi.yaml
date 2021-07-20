@@ -1,0 +1,3 @@
+name: cake-aws-lambda-blog
+runtime: nodejs
+description: A minimal AWS TypeScript Pulumi program
